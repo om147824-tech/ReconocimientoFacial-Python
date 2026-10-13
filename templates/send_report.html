@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Enviar Reporte Manual</h2>
+<form method="POST">
+  <div class="form-group">
+    <label>Grupo:</label>
+    <input type="text" name="grupo" class="form-control" required>
+  </div>
+  <button type="submit" class="btn btn-info">Enviar Reporte</button>
+</form>
+{% endblock %}

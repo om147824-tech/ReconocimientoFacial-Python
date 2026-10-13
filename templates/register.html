@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Registro de Estudiantes</h2>
+<form method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <label>Nombre:</label>
+    <input type="text" name="nombre" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label>Apellido Paterno:</label>
+    <input type="text" name="paterno" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label>Apellido Materno:</label>
+    <input type="text" name="materno" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label>Carrera:</label>
+    <input type="text" name="carrera" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label>Grupo:</label>
+    <input type="text" name="grupo" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label>Foto (captura o selecciona un archivo):</label>
+    <input type="file" name="photo" accept="image/*" class="form-control-file" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar Estudiante</button>
+</form>
+{% endblock %}

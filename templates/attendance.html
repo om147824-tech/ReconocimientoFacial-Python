@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Iniciar Asistencia</h2>
+<form method="POST">
+  <div class="form-group">
+    <label>Grupo:</label>
+    <input type="text" name="grupo" class="form-control" required>
+  </div>
+  <button type="submit" class="btn btn-success">Iniciar Asistencia</button>
+</form>
+
+{% if asistentes %}
+  <hr>
+  <h3>Asistentes detectados para el grupo {{ grupo }}:</h3>
+  <ul>
+    {% for a in asistentes %}
+      <li>{{ a }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+{% endblock %}
